@@ -26,7 +26,7 @@ CREATE TABLE `case-study-1-435815.bike_trips.combined_year` AS (
   SELECT * FROM `bike_trips.202212_tripdata`
 );
 
--- checking no of rows which are 5667717
+-- Checked the number of rows in our new table, which was 5667717.
 
 SELECT COUNT(*)
 FROM `case-study-1-435815.bike_trips.combined_year`;
