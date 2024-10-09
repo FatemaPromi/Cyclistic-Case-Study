@@ -29,12 +29,12 @@ Using SQL queries, I performed a detailed analysis of the dataset, focusing on t
 * Monthly Trends: I analyzed ride volumes across each month of the year to identify seasonal variations.
 * Bike Type Preferences: I compared the distribution of bike types (electric, classic, and docked) between casual riders and members.
 ### Key Insights
-1.Casual Riders vs. Annual Members:
+1. Casual Riders vs. Annual Members:
   * Casual riders tend to take longer rides on average than annual members.
   * Casual riders are most active during weekends, while members use bikes more during weekdays, likely for commuting purposes.
-2.Seasonal Trends:
+2. Seasonal Trends:
   * The highest number of rides takes place in summer, with July being the peak month for casual riders and August for annual members.
-3.Bike Type Preference:
+3. Bike Type Preference:
   * Electric bikes are the most popular type of bike for both rider categories, but casual riders show a stronger preference for docked bikes.
 ## Share
 ### Data Visualization
