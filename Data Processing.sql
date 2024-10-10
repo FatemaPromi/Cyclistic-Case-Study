@@ -4,8 +4,13 @@
 SELECT COUNT(ride_id) - COUNT(DISTINCT ride_id) AS duplicate_rows
 FROM `case-study-1-435815.bike_trips.combined_table`;
 
+--checking for nulls
 
---checking the length of the string to see ride_id value is 16 characters.
+SELECT COUNTIF(ride_id IS NULL) AS null_count
+FROM case-study-1-435815.bike_trips.combined_table`
+
+
+--checking the string length to see if the ride_id value is 16 characters.
 
 SELECT LENGTH(ride_id) AS length_ride_id, COUNT(ride_id) AS no_of_rows
 FROM `case-study-1-435815.bike_trips.combined_table`
