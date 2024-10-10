@@ -22,7 +22,7 @@ I created a bucket on Google Cloud Storage and uploaded the data. Then, I opened
 * Ride Length Calculation: I created a new column, duration, by subtracting the started_at time from ended_at. Rows with negative ride lengths or durations over 24 hours were filtered out.
 * Additional Features: I extracted and added extra columns for a start and return time, date, day and month separately to facilitate analysis of hourly, weekly and monthly trends.
 ## Analyze
-### Exploratory Data Analysis
+### [Exploratory Data Analysis](https://github.com/FatemaPromi/Cyclistic-Case-Study/blob/de5fdf2ef7b674841c6d68d8417373a4011043bf/Data%20Analysis.sql)
 Using SQL queries, I performed a detailed analysis of the dataset, focusing on the following:
 * Ride Duration: I calculated the average, minimum, and maximum ride durations for both casual riders and annual members.
 * Day of the Week and Time of Day: I examined ride patterns for both rider types to determine peak days and hours of usage.
@@ -41,9 +41,9 @@ Using SQL queries, I performed a detailed analysis of the dataset, focusing on t
 Using Tableau Public, I created a series of visualizations to present the key findings. The [dashboard](https://public.tableau.com/views/Cyclistic_17282524909430/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) includes:
   * Ride Duration Comparison: A bar chart showing the average ride length for casual riders and members.
   * Day of Week Analysis: A bar graph comparing ride counts by day of the week for casual riders and members.
-  * Seasonal Ride Trends: A pie chart showing ride volumes by seasons for both groups.
+  * Seasonal Ride Trends: A pie chart showing ride volumes by season for both groups.
   * Bike Type Distribution: A stacked bar chart illustrating the popularity of different bike types among casual riders and members.
-  * Peak Time Analysis: A line chart showing the peak times of day for both casual riders and members.
+  * Peak Time Analysis: A line chart showing the day's peak times for casual riders and members.
 ## Act
 ### Conclusion
 The analysis revealed clear distinctions in how casual riders and annual members use Cyclistic’s bikes. Casual riders tend to take longer rides and prefer weekends, while members use bikes more consistently during weekdays, likely for commuting. Both groups preferred electric bikes, with higher ridership during the summer months.
