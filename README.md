@@ -13,12 +13,12 @@ The data for this analysis is sourced from Cyclistic’s historical trip data fr
 ## Process
 ### Data Processing
 Given the large size of the dataset (over 5.6 million rows), I used Google BigQuery and Google Cloud Console for data processing and storage. BigQuery’s ability to handle large datasets made it the ideal choice for merging, cleaning, and analyzing the data.
-#### [Combining Data](https://github.com/FatemaPromi/Cyclistic-Case-Study/blob/501d4d12ae299e51fd66a7b13d5733c1f6519f9f/Data%20Combining.sql)
-I created a bucket on Google Cloud Storage and uploaded the data. Then, I opened BigQuery and created a dataset to store all the tables. I used the "Create Table" option to import each CSV file from Cloud Storage into BigQuery. After all 12 CSV files were imported as tables in BigQuery, I used the UNION ALL SQL operator to merge them into a new table and named it combined_table. 
+#### Combining Data
+I created a bucket on Google Cloud Storage and uploaded the data. Then, I opened BigQuery and created a dataset to store all the tables. I used the "Create Table" option to import each CSV file from Cloud Storage into BigQuery. After all 12 CSV files were imported as tables in BigQuery, I used the [UNION ALL]((https://github.com/FatemaPromi/Cyclistic-Case-Study/blob/501d4d12ae299e51fd66a7b13d5733c1f6519f9f/Data%20Combining.sql)) SQL operator to merge them into a new table and named it combined_table. 
 #### Data Cleaning and Validation
 * Checking Data Types and Renaming Columns: I verified that each column had the correct data type and converted date-related columns (started_at, ended_at) to datetime where necessary. Then, I renamed the columns for better understanding (member_casual to user_type, etc.)
 * Handling Missing Values: I removed the null values in critical fields.
-* Duplicate Checks: I checked for duplicate ride_id values and confirmed none were present.
+* [Duplicate Checks]: I checked for duplicate ride_id values and confirmed none were present.
 * Ride Length Calculation: I created a new column, duration by subtracting the started_at time from ended_at. Rows with negative ride lengths or durations over 24 hours were filtered out.
 * Additional Features: I extracted and added columns for start and end time, date, day and month separately to facilitate analysis of hourly, weekly and monthly trends.
 ## Analyze
