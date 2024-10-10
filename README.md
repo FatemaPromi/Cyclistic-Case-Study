@@ -16,11 +16,11 @@ Given the large size of the dataset (over 5.6 million rows), I used Google BigQu
 #### Combining Data
 I created a bucket on Google Cloud Storage and uploaded the data. Then, I opened BigQuery and created a dataset to store all the tables. I used the "Create Table" option to import each CSV file from Cloud Storage into BigQuery. After all 12 CSV files were imported as tables in BigQuery, I used the [UNION ALL]((https://github.com/FatemaPromi/Cyclistic-Case-Study/blob/501d4d12ae299e51fd66a7b13d5733c1f6519f9f/Data%20Combining.sql)) SQL operator to merge them into a new table and named it combined_table. 
 #### Data Cleaning and Validation
-* Checking Data Types and Renaming Columns: I verified that each column had the correct data type and converted date-related columns (started_at, ended_at) to datetime where necessary. Then, I renamed the columns for better understanding (member_casual to user_type, etc.)
+* Checking Data Types and Renaming Columns: I verified that each column had the correct data type and converted date-related columns (started_at, ended_at) to datetime where necessary. Then, I renamed the columns to understand the column names better. (member_casual to user_type, etc.)
 * Handling Missing Values: I removed the null values in critical fields.
-* [Duplicate Checks]: I checked for duplicate ride_id values and confirmed none were present.
-* Ride Length Calculation: I created a new column, duration by subtracting the started_at time from ended_at. Rows with negative ride lengths or durations over 24 hours were filtered out.
-* Additional Features: I extracted and added columns for start and end time, date, day and month separately to facilitate analysis of hourly, weekly and monthly trends.
+* [Duplicate Checks](https://github.com/FatemaPromi/Cyclistic-Case-Study/blob/130886767b2cf7b0770e55914ec1a63dc122474c/Data%20Processing.sql): I checked for duplicate ride_id values and confirmed none were present.
+* [Ride Length Calculation](https://github.com/FatemaPromi/Cyclistic-Case-Study/blob/130886767b2cf7b0770e55914ec1a63dc122474c/Data%20Processing.sql): I created a new column, duration, by subtracting the started_at time from ended_at. Rows with negative ride lengths or durations over 24 hours were filtered out.
+* [Additional Features](https://github.com/FatemaPromi/Cyclistic-Case-Study/blob/130886767b2cf7b0770e55914ec1a63dc122474c/Data%20Processing.sql): I extracted and added extra columns for a start and return time, date, day and month separately to facilitate analysis of hourly, weekly and monthly trends.
 ## Analyze
 ### Exploratory Data Analysis
 Using SQL queries, I performed a detailed analysis of the dataset, focusing on the following:
